@@ -1,0 +1,22 @@
+app:
+  data_dir: ../data
+  templates_dir: ../templates
+
+gateway:
+  host: 127.0.0.1
+  port: 8765
+
+llm:
+  provider: openai_compatible
+  base_url: https://api.example.com/v1
+  api_key_env: FDE_LLM_API_KEY
+  model: gpt-4.1-mini
+  timeout_seconds: 60
+
+tts:
+  provider: moss_tts_nano
+  base_url: http://127.0.0.1:18083
+
+asr:
+  provider: sherpa_onnx
+  mode: local_service
